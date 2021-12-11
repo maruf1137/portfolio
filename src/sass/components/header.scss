@@ -1,0 +1,17 @@
+.header {
+  padding-top: 5rem;
+  &__name {
+    transform: translateY(6rem);
+  }
+  .text-transparent {
+    @include text-transparent;
+  }
+
+  .text-transparent--1 {
+    display: block;
+    transform: translateY(6rem);
+  }
+
+  .main-text {
+  }
+}

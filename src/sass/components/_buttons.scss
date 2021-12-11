@@ -1,0 +1,9 @@
+.btn {
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: capitalize;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
