@@ -10,17 +10,7 @@
   align-items: center;
 
   &__logo {
-    height: 7rem;
-    width: 7rem;
-
-    a:link,
-    a:visited {
-    }
-
-    img {
-      @include img-size;
-      border-radius: 50%;
-    }
+    @include logo-size;
   }
 
   &__bars {

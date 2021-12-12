@@ -1,9 +1,39 @@
 .btn {
+  @include text-with-wh-bg;
+  border-radius: 10rem;
+  padding: 1.5rem 10rem;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+  border: none;
   cursor: pointer;
-  transition: all 0.3s;
-  text-transform: capitalize;
+  background-color: #fff;
+}
 
-  &:hover {
-    color: $color-primary;
-  }
+.btn:hover::after {
+  -webkit-transform: scaleX(1.7) scaleY(1.5);
+  -ms-transform: scaleX(1.7) scaleY(1.5);
+  transform: scaleX(1.7) scaleY(1.5);
+  opacity: 0;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  background: #fff;
 }

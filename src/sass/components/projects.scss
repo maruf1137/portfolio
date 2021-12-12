@@ -1,9 +1,6 @@
 .projects {
   padding: 8rem 0;
 
-  .border {
-  }
-
   &__list {
     margin-top: 5rem;
     text-align: center;
@@ -17,9 +14,6 @@
 
   &__item {
     position: relative;
-  }
-
-  h2 {
   }
 
   h3 {
@@ -44,11 +38,42 @@
       @include img-size;
     }
   }
+}
 
-  .btn {
-    @include text-with-wh-bg;
-    border-radius: 10rem;
-    padding: 1.5rem 10rem;
-    font-size: 2.2rem;
+// other projects
+
+.other-projects {
+  padding: 8rem 0;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+  }
+
+  &__item {
+    border-bottom: 2px solid $color-light-white;
+    padding: 3rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+    background-color: $color-primary;
+
+    &:hover {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../img/project-img-1.jpg);
+      background-position: center center;
+      background-size: cover;
+      padding: 5rem 2.5rem;
+    }
+  }
+
+  p {
+    width: 36%;
   }
 }

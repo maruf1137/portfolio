@@ -1,0 +1,42 @@
+.footer {
+  padding-top: 8rem;
+
+  &__main {
+    border-bottom: 1px solid $color-light-white;
+    padding-bottom: 5rem;
+    @include flex-center;
+  }
+
+  &__logo {
+    @include logo-size;
+  }
+
+  &__email {
+    h2 {
+      text-transform: lowercase;
+    }
+  }
+
+  &__sub {
+    @include flex-center;
+    padding: 2.5rem 0;
+
+    .p-text {
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: $color-light-white;
+    }
+  }
+
+  &__social--list {
+    @include flex-center;
+    gap: 0 3.5rem;
+  }
+  &__social--item {
+  }
+  &__social--link {
+    .icon {
+      @include icon-vactor;
+    }
+  }
+}

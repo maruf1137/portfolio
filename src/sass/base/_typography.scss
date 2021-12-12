@@ -25,8 +25,8 @@ h4.heading {
   color: $color-white;
 }
 
-.p__text {
-  font-size: 3.2rem;
+.p-text {
+  font-size: 2.8rem;
   color: $color-white;
   font-weight: 400;
 }
@@ -45,10 +45,46 @@ h4.heading {
   text-transform: capitalize;
 }
 
+.border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-1,
+  &-3 {
+    height: 0.2rem;
+    width: 20rem;
+    background-color: $color-white;
+  }
+
+  &-1 {
+    transform: translateX(-2rem);
+  }
+
+  &-2 {
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid $color-white;
+  }
+  &-3 {
+    transform: translateX(2rem);
+  }
+}
+
+// mixins
+
 @mixin pos-center {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @mixin img-size {
@@ -56,9 +92,20 @@ h4.heading {
   width: 100%;
 }
 
-@mixin icon-vector {
-  height: 2rem;
-  width: 2rem;
+@mixin logo-size {
+  height: 7rem;
+  width: 7rem;
+
+  img {
+    @include img-size;
+    border-radius: 50%;
+  }
+}
+
+@mixin icon-vactor {
+  height: 3.5rem;
+  width: 3.5rem;
+  fill: $color-light-white;
 }
 
 @mixin text-transparent {
