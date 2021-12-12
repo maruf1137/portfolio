@@ -2,15 +2,25 @@
   padding: 1.5rem 5rem;
   width: 100%;
   background-color: $color-primary;
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
+
+  .navbar {
+    @include flex-center;
+  }
 
   &__logo {
     @include logo-size;
+  }
+
+  .bars-bg {
+    height: 2rem;
+    width: 2rem;
+    background-color: #000;
+    @include bars-pos;
+    transform: scale(0);
+    z-index: 10;
+    transition: all 0.5s;
+    border-radius: 50%;
   }
 
   &__bars {
@@ -18,7 +28,8 @@
     background-color: transparent;
     height: 3.5rem;
     width: 5rem;
-    position: relative;
+    @include bars-pos;
+    z-index: 11;
 
     &--1,
     &--2,
@@ -43,7 +54,7 @@
   }
 }
 
-.active-nav {
+.active-sidebar {
   .nav__bars--1 {
     top: 0;
     display: none;
@@ -55,5 +66,15 @@
   .nav__bars--3 {
     top: 2rem;
     transform: rotate(131deg);
+  }
+
+  .bars-bg {
+    transform: scale(200);
+  }
+
+  .sidebar {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
   }
 }

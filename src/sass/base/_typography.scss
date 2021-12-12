@@ -73,6 +73,12 @@ h4.heading {
   }
 }
 
+.icon {
+  height: 3.5rem;
+  width: 3.5rem;
+  fill: $color-light-white;
+}
+
 // mixins
 
 @mixin pos-center {
@@ -102,12 +108,6 @@ h4.heading {
   }
 }
 
-@mixin icon-vactor {
-  height: 3.5rem;
-  width: 3.5rem;
-  fill: $color-light-white;
-}
-
 @mixin text-transparent {
   color: transparent;
   -webkit-font-smoothing: antialiased;
@@ -119,4 +119,11 @@ h4.heading {
   padding: 0.5rem 2rem;
   color: $color-black;
   display: inline-block;
+}
+
+@mixin bars-pos {
+  position: fixed;
+  top: 6rem;
+  right: 5rem;
+  transform: translateY(-50%);
 }

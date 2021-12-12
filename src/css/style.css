@@ -110,6 +110,12 @@ h4.heading {
   transform: translateX(2rem);
 }
 
+.icon {
+  height: 3.5rem;
+  width: 3.5rem;
+  fill: rgba(255, 255, 255, 0.438);
+}
+
 html,
 body,
 div,
@@ -977,6 +983,9 @@ a:hover {
   padding: 1.5rem 5rem;
   width: 100%;
   background-color: #212121;
+  position: relative;
+}
+.nav .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -990,12 +999,29 @@ a:hover {
   width: 100%;
   border-radius: 50%;
 }
+.nav .bars-bg {
+  height: 2rem;
+  width: 2rem;
+  background-color: #000;
+  position: fixed;
+  top: 6rem;
+  right: 5rem;
+  transform: translateY(-50%);
+  transform: scale(0);
+  z-index: 10;
+  transition: all 0.5s;
+  border-radius: 50%;
+}
 .nav__bars {
   cursor: pointer;
   background-color: transparent;
   height: 3.5rem;
   width: 5rem;
-  position: relative;
+  position: fixed;
+  top: 6rem;
+  right: 5rem;
+  transform: translateY(-50%);
+  z-index: 11;
 }
 .nav__bars--1, .nav__bars--2, .nav__bars--3 {
   position: absolute;
@@ -1015,19 +1041,102 @@ a:hover {
   top: 3rem;
 }
 
-.active-nav .nav__bars--1 {
+.active-sidebar .nav__bars--1 {
   top: 0;
   display: none;
 }
-.active-nav .nav__bars--2 {
+.active-sidebar .nav__bars--2 {
   top: 2rem;
   transform: rotate(45deg);
 }
-.active-nav .nav__bars--3 {
+.active-sidebar .nav__bars--3 {
   top: 2rem;
   transform: rotate(131deg);
 }
+.active-sidebar .bars-bg {
+  transform: scale(200);
+}
+.active-sidebar .sidebar {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
 
+.sidebar {
+  transform: translateX(-100%);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  transition: all 0.5s;
+  height: 100vh;
+  width: 100%;
+}
+.sidebar__logo {
+  height: 7rem;
+  width: 7rem;
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+}
+.sidebar__logo img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.sidebar__content {
+  position: absolute;
+  top: 20rem;
+  left: 10rem;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.sidebar__list {
+  margin-right: 36%;
+}
+.sidebar__item {
+  display: block;
+}
+.sidebar__link {
+  font-size: 6rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.438);
+  transition: all 0.3s;
+  transform: translateX(0);
+  display: block;
+}
+.sidebar__link:hover {
+  color: #fff;
+  transform: translateX(1.5rem);
+}
+.sidebar .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem 0;
+}
+.sidebar .contact__email {
+  display: block;
+  font-size: 3.2rem;
+  text-transform: lowercase;
+  color: #fff;
+}
+.sidebar .contact__number {
+  display: block;
+  font-size: 3.2rem;
+  color: #fff;
+}
+.sidebar .contact__address {
+  font-size: 2.2rem;
+}
+.sidebar .contact__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 2rem;
+}
 .header {
   padding-top: 5rem;
   height: 90vh;
@@ -1157,11 +1266,6 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   gap: 0 3.5rem;
-}
-.footer__social--link .icon {
-  height: 3.5rem;
-  width: 3.5rem;
-  fill: rgba(255, 255, 255, 0.438);
 }
 
 /*# sourceMappingURL=style.css.map */
