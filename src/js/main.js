@@ -14,10 +14,6 @@ openSidebarBtn.addEventListener("click", activeSidebar);
 const cursor = document.querySelector(".cursor");
 gsap.to(cursor, { xPercent: -50, yPercent: -50 });
 const editCursor = (e) => {
-  // const { clientX: x, clientY: y } = e;
-  // cursor.style.left = x + "px";
-  // cursor.style.top = y + "px";
-
   gsap.to(cursor, { x: e.x, y: e.y });
 };
 
@@ -29,20 +25,29 @@ const cursorSmall = () => {
 };
 
 window.addEventListener("mousemove", editCursor);
-// openSidebarBtn.addEventListener("mouseover", cursorBig);
-// openSidebarBtn.addEventListener("mouseout", cursorSmall);
 
-// create sidebar animation with gsap
-/*
-const sidebarOpen = () => {
-  const sidebartl = gsap.timeline();
-  sidebartl.to(".bars-bg", { scale: 1000 });
-  sidebartl.to(".sidebar", { display: "block", opacity: 1, x: 0 });
-};
+// create change cursor effects
+(function () {
+  const navItem = document.querySelectorAll(".sidebar__item");
 
-openSidebarBtn.addEventListener("click", function () {
-  activeSidebar();
-  console.log(navbar.classList === "sidebar-active");
-  // console.log(navbar.classList);
-});
-*/
+  function animatIt(e) {
+    const link = this.querySelector(".link");
+    const x = e.offsetX;
+    const y = e.offsetY;
+    const width = this.offsetWidth;
+    const height = this.offsetHeight;
+    let move = 25;
+    const xMove = (x / width) * (move * 2) - move;
+    const yMove = (y / height) * (move * 2) - move;
+
+    link.style.transform = `translate(${xMove}px, ${yMove}px)`;
+    // gsap.to(link, { x: xMove, y: yMove, duration: 0.2 });
+
+    if (e.type === "mouseleave") {
+      link.style.transform = "";
+      // gsap.to(link, { x: 0, y: 0, duration: 0.1 });
+    }
+  }
+  navItem.forEach((b) => b.addEventListener("mousemove", animatIt));
+  navItem.forEach((b) => b.addEventListener("mouseleave", animatIt));
+})();

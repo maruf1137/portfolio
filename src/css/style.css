@@ -1122,13 +1122,11 @@ a:hover {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.438);
   transition: all 0.3s;
-  transform: translateX(0);
   display: block;
   cursor: none;
 }
 .sidebar__link:hover {
   color: #fff;
-  transform: translateX(1.5rem);
 }
 .sidebar .contact {
   display: flex;
