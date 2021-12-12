@@ -1,0 +1,54 @@
+.projects {
+  padding: 8rem 0;
+
+  .border {
+  }
+
+  &__list {
+    margin-top: 5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12rem 0;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10rem;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  h2 {
+  }
+
+  h3 {
+    @include text-with-wh-bg;
+    position: absolute;
+    top: -2rem;
+    left: -30%;
+  }
+
+  h4 {
+    @include text-with-wh-bg;
+    position: absolute;
+    bottom: -2rem;
+    right: -30%;
+  }
+
+  &__img {
+    height: 90vh;
+    width: 50vw;
+
+    img {
+      @include img-size;
+    }
+  }
+
+  .btn {
+    @include text-with-wh-bg;
+    border-radius: 10rem;
+    padding: 1.5rem 10rem;
+    font-size: 2.2rem;
+  }
+}

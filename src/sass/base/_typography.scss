@@ -14,13 +14,13 @@ h2.heading {
 }
 
 h3.heading {
-  font-size: 8rem;
+  font-size: 5rem;
   font-weight: 500;
   color: $color-white;
 }
 
 h4.heading {
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 500;
   color: $color-white;
 }
@@ -65,4 +65,11 @@ h4.heading {
   color: transparent;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke: 2px #dbd8d6;
+}
+
+@mixin text-with-wh-bg {
+  background-color: $color-white;
+  padding: 0.5rem 2rem;
+  color: $color-black;
+  display: inline-block;
 }

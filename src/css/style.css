@@ -38,6 +38,7 @@ body {
 .row {
   max-width: 160rem;
   margin: 0 auto;
+  padding: 0 5rem;
 }
 
 h1.heading {
@@ -56,13 +57,13 @@ h2.heading {
 }
 
 h3.heading {
-  font-size: 8rem;
+  font-size: 5rem;
   font-weight: 500;
   color: #fff;
 }
 
 h4.heading {
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 500;
   color: #fff;
 }
@@ -971,6 +972,8 @@ a:hover {
 
 .header {
   padding-top: 5rem;
+  height: 90vh;
+  width: 100%;
 }
 .header__name {
   transform: translateY(6rem);
@@ -983,6 +986,57 @@ a:hover {
 .header .text-transparent--1 {
   display: block;
   transform: translateY(6rem);
+}
+.projects {
+  padding: 8rem 0;
+}
+.projects__list {
+  margin-top: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12rem 0;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+.projects__item {
+  position: relative;
+}
+.projects h3 {
+  background-color: #fff;
+  padding: 0.5rem 2rem;
+  color: #000;
+  display: inline-block;
+  position: absolute;
+  top: -2rem;
+  left: -30%;
+}
+.projects h4 {
+  background-color: #fff;
+  padding: 0.5rem 2rem;
+  color: #000;
+  display: inline-block;
+  position: absolute;
+  bottom: -2rem;
+  right: -30%;
+}
+.projects__img {
+  height: 90vh;
+  width: 50vw;
+}
+.projects__img img {
+  height: 100%;
+  width: 100%;
+}
+.projects .btn {
+  background-color: #fff;
+  padding: 0.5rem 2rem;
+  color: #000;
+  display: inline-block;
+  border-radius: 10rem;
+  padding: 1.5rem 10rem;
+  font-size: 2.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
