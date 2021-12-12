@@ -79,6 +79,11 @@ h4.heading {
   fill: $color-light-white;
 }
 
+a:link,
+a:visited {
+  cursor: none;
+}
+
 // mixins
 
 @mixin pos-center {

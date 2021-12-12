@@ -24,7 +24,7 @@
   }
 
   &__bars {
-    cursor: pointer;
+    // cursor: pointer;
     background-color: transparent;
     height: 3.5rem;
     width: 5rem;
@@ -69,7 +69,7 @@
   }
 
   .bars-bg {
-    transform: scale(200);
+    transform: scale(1000);
   }
 
   .sidebar {

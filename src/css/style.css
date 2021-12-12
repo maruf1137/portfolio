@@ -33,6 +33,7 @@ body {
   color: #fff;
   overflow-x: hidden;
   background-color: #212121;
+  cursor: none;
 }
 
 .row {
@@ -114,6 +115,11 @@ h4.heading {
   height: 3.5rem;
   width: 3.5rem;
   fill: rgba(255, 255, 255, 0.438);
+}
+
+a:link,
+a:visited {
+  cursor: none;
 }
 
 html,
@@ -979,6 +985,17 @@ a:hover {
   background: #fff;
 }
 
+.cursor {
+  position: fixed;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 13;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
 .nav {
   padding: 1.5rem 5rem;
   width: 100%;
@@ -1013,7 +1030,6 @@ a:hover {
   border-radius: 50%;
 }
 .nav__bars {
-  cursor: pointer;
   background-color: transparent;
   height: 3.5rem;
   width: 5rem;
@@ -1054,7 +1070,7 @@ a:hover {
   transform: rotate(131deg);
 }
 .active-sidebar .bars-bg {
-  transform: scale(200);
+  transform: scale(1000);
 }
 .active-sidebar .sidebar {
   display: block;
@@ -1072,6 +1088,7 @@ a:hover {
   transition: all 0.5s;
   height: 100vh;
   width: 100%;
+  transition-delay: 0.5s;
 }
 .sidebar__logo {
   height: 7rem;
@@ -1107,6 +1124,7 @@ a:hover {
   transition: all 0.3s;
   transform: translateX(0);
   display: block;
+  cursor: none;
 }
 .sidebar__link:hover {
   color: #fff;

@@ -12,12 +12,13 @@
 		rel="stylesheet">
 
 	<!-- ================ CSS FILES ================= -->
-	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<!-- <link rel="stylesheet" href="fonts/stylesheet.css"> -->
 	<link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
 	<!--  active-nav -->
+	<div class="cursor"></div>
 	<nav class="nav">
 		<div class="sidebar">
 			<div class="sidebar__logo">
@@ -28,46 +29,53 @@
 			<div class="sidebar__content">
 				<ul class="sidebar__list">
 					<li class="sidebar__item">
-						<a href="#" class="sidebar__link">home</a>
+						<a href="#" onclick="sidebar()" onmouseover="cursorBig()" onmouseout="cursorSmall()"
+							class="sidebar__link">home</a>
 					</li>
 					<li class="sidebar__item">
-						<a href="#" class="sidebar__link">about</a>
+						<a href="#" onclick="sidebar()" onmouseover="cursorBig()" onmouseout="cursorSmall()"
+							class="sidebar__link">about</a>
 					</li>
 					<li class="sidebar__item">
-						<a href="#" class="sidebar__link">projects</a>
+						<a href="#" onclick="sidebar()" onmouseover="cursorBig()" onmouseout="cursorSmall()"
+							class="sidebar__link">projects</a>
 					</li>
 					<li class="sidebar__item">
-						<a href="#" class="sidebar__link">contact</a>
+						<a href="#" onclick="sidebar()" onmouseover="cursorBig()" onmouseout="cursorSmall()"
+							class="sidebar__link">contact</a>
 					</li>
 				</ul>
 				<div class="contact">
-					<a href="#" class="contact__email">mmaruf1137@gmail.com</a>
-					<a href="#" class="contact__number">01764469753</a>
+					<a href="mailto:mmaruf1137@gmail.com" class="contact__email">mmaruf1137@gmail.com</a>
+					<a href="tel:01764469753" class="contact__number">01764469753</a>
 					<p class="p-text contact__address">new ailpara, narayanganj, dhaka, bangladesh</p>
 					<ul class="contact__list">
 						<li class="contact__item">
-							<a href="#">
+							<a href="https://github.com/maruf1137" onmouseover="cursorBig()" onmouseout="cursorSmall()">
 								<svg class="icon">
 									<use xlink:href="img/icons.svg#icon-github"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="contact__item">
-							<a href="#">
+							<a href="https://twitter.com/maruf1137" onmouseover="cursorBig()"
+								onmouseout="cursorSmall()">
 								<svg class="icon">
 									<use xlink:href="img/icons.svg#icon-twitter"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="contact__item">
-							<a href="#">
+							<a href="https://www.linkedin.com/in/maruf1137" onmouseover="cursorBig()"
+								onmouseout="cursorSmall()">
 								<svg class="icon">
 									<use xlink:href="img/icons.svg#icon-linkedin"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="contact__item">
-							<a href="#">
+							<a href="https://www.facebook.com/maruf1137" onmouseover="cursorBig()"
+								onmouseout="cursorSmall()">
 								<svg class="icon">
 									<use xlink:href="img/icons.svg#icon-facebook"></use>
 								</svg>
@@ -86,7 +94,7 @@
 				</a>
 			</div>
 			<div class="bars-bg"></div>
-			<div class="nav__bars">
+			<div class="nav__bars" onmouseover="cursorBig()" onmouseout="cursorSmall()">
 				<span class="nav__bars--1"></span>
 				<span class="nav__bars--2"></span>
 				<span class="nav__bars--3"></span>
@@ -151,7 +159,7 @@
 
 	<section class="other-projects">
 		<div class="row center">
-			<h2 class="heading">top projects</h2>
+			<h2 class="heading">other projects</h2>
 			<div class="border">
 				<div class="border-1"></div>
 				<div class="border-2"></div>
@@ -161,23 +169,23 @@
 
 		<div class="row">
 			<ul class="other-projects__list">
-				<li class="other-projects__item">
+				<li class="other-projects__item" onmouseover="cursorBig()" onmouseout="cursorSmall()">
 					<h3 class="heading">Comfy Sloth Store</h3>
 					<p class="p-text">react, e-commerce store frontend development</p>
 				</li>
-				<li class="other-projects__item">
+				<li class="other-projects__item" onmouseover="cursorBig()" onmouseout="cursorSmall()">
 					<h3 class="heading">Comfy Sloth Store</h3>
 					<p class="p-text">react, e-commerce store frontend development</p>
 				</li>
-				<li class="other-projects__item">
+				<li class="other-projects__item" onmouseover="cursorBig()" onmouseout="cursorSmall()">
 					<h3 class="heading">Comfy Sloth Store</h3>
 					<p class="p-text">react, e-commerce store frontend development</p>
 				</li>
-				<li class="other-projects__item">
+				<li class="other-projects__item" onmouseover="cursorBig()" onmouseout="cursorSmall()">
 					<h3 class="heading">Comfy Sloth Store</h3>
 					<p class="p-text">react, e-commerce store frontend development</p>
 				</li>
-				<li class="other-projects__item">
+				<li class="other-projects__item" onmouseover="cursorBig()" onmouseout="cursorSmall()">
 					<h3 class="heading">Comfy Sloth Store</h3>
 					<p class="p-text">react, e-commerce store frontend development</p>
 				</li>
@@ -198,8 +206,8 @@
 						<img src="img/maruf-img-3.jpg" alt="maruf">
 					</a>
 				</div>
-				<div class="footer__email">
-					<a href="#">
+				<div class="footer__email" onmouseover="cursorBig()" onmouseout="cursorSmall()">
+					<a href="mailto:madarasasite@gmail.com">
 						<h2 class="heading">mmaruf1137@gmail.com</h2>
 					</a>
 				</div>
@@ -208,14 +216,16 @@
 				<p class="p-text">copyright by maruf 2021</p>
 				<ul class="footer__social--list">
 					<li class="footer__social--item">
-						<a class="footer__social--link" href="#">
+						<a class="footer__social--link" href="https://github.com/maruf1137" onmouseover="cursorBig()"
+							onmouseout="cursorSmall()">
 							<svg class="icon">
 								<use xlink:href="img/icons.svg#icon-github"></use>
 							</svg>
 						</a>
 					</li>
 					<li class="footer__social--item">
-						<a href="#" class="footer__social--link">
+						<a href="https://twitter.com/maruf1137" class="footer__social--link" onmouseover="cursorBig()"
+							onmouseout="cursorSmall()">
 							<svg class="icon">
 								<use xlink:href="img/icons.svg#icon-twitter"></use>
 							</svg>
@@ -223,7 +233,8 @@
 
 					</li>
 					<li class="footer__social--item">
-						<a href="#" class="footer__social--link">
+						<a href="https://www.linkedin.com/in/maruf1137" onmouseover="cursorBig()"
+							onmouseout="cursorSmall()" class="footer__social--link">
 							<svg class="icon">
 								<use xlink:href="img/icons.svg#icon-linkedin"></use>
 							</svg>
@@ -231,7 +242,8 @@
 
 					</li>
 					<li class="footer__social--item">
-						<a href="#" class="footer__social--link">
+						<a href="https://www.facebook.com/maruf1137" onmouseover="cursorBig()"
+							onmouseout="cursorSmall()" class="footer__social--link">
 							<svg class="icon">
 								<use xlink:href="img/icons.svg#icon-facebook"></use>
 							</svg>
@@ -244,6 +256,9 @@
 
 	</footer>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+		integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="js/main.js"></script>
 </body>
 
